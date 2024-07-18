@@ -8,6 +8,8 @@
 //#pragma comment( lib, "DXGI.lib" )
 //
 
+import std;
+
 #include <d3d12.h>
 #pragma comment( lib, "d3d12.lib" )
 
@@ -97,6 +99,7 @@ namespace Repro
 
     void Renderer::Init()
     {
+        std::cout << "Renderer::Init" << std::enable_if;
         ID3D12GraphicsCommandList* commandList{};
         SetMarker( commandList, "it's nullptr" );
 
