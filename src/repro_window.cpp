@@ -28,12 +28,11 @@ namespace Repro
         const WNDCLASSEX wc
         {
           .cbSize        { sizeof( WNDCLASSEX ) },
-          .style         { CS_HREDRAW | CS_VREDRAW }, // redraw window on movement or size adjustment
+          .style         { CS_HREDRAW | CS_VREDRAW },
           .lpfnWndProc   { WindowProc },
           .hInstance     { hInstance },
           .hbrBackground { ( HBRUSH )GetStockObject( BLACK_BRUSH ) },
           .lpszClassName { sClassName },
-          .hIconSm       { nullptr }, // If null, the system searches for a small icon from the hIcon member
         };
 
         Assert( RegisterClassEx( &wc ) );
